@@ -22,6 +22,7 @@ console.log(sumNaturalNums(7));
 // --- Exercise 2 ---
 // Write a program that reads the natural number n and determines the sum S=2+4+..+(2n).
 // Restrictions and clarifications: 0 < n ≤ 10000
+
 function sumEvenNums(num) {
   let sum = 0;
 
@@ -39,3 +40,25 @@ function sumEvenNums(num) {
 };
 
 console.log(sumEvenNums(48));
+
+
+// --- Exercise 3 ---
+// Write a program that reads the natural number n and determines the value of n! (n factorial)
+// Restrictions and clarifications: 0 <= n <= 15
+// by definition, 0! = 1
+
+function nFactorial(num) {
+  let nFactorial = 1;
+
+  for(let i = 1; i <= num && num <= 15; i++) {
+    nFactorial *= i;
+  };
+
+  if(num < 0 || num > 15) {
+    console.log('Please, enter a number between 0 and 15!');
+  };
+
+  return nFactorial;
+};
+
+console.log(nFactorial(4));
