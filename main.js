@@ -116,3 +116,25 @@ function returnOddProduct(limit) {
 };
 
 console.log(returnOddProduct(4));
+
+
+// --- Exercise 6 ---
+// Write a program that reads the natural number "n" and determines the
+// sum s = 1**1 + 2**2 + ... + n**n
+// Restrictions and clarifications: 0 < n <= 15
+
+function returnSumOfExponentiatedNumbers(num) {
+  if (num <= 0 || num > 15) {
+    throw Error('Please, eneter a number between 1 and 15!');
+  }
+
+  let sum = 0;
+
+  for (let i = 1; i <= num; i++) {
+    sum = sum + i**i;
+  }
+
+  return sum;
+};
+
+console.log(returnSumOfExponentiatedNumbers(4));
