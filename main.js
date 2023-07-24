@@ -237,7 +237,7 @@ function returnMinNumber(...numbers) {
 const numbersArray2 = [21, 6, 9, 100, 23, 17, 14, 5, 18];
 console.log(returnMinNumber(...numbersArray2));
 
-
+// --- Exercise 11 ---
 // Given n natural numbers. Calculate the sum of the largest and smallest given numbers.
 // Restrictions and clarifications:
 //      -> 1 <= n <= 100
@@ -262,3 +262,30 @@ function calculateSumFromMinAndMaxNumber(...numbers) {
 
 const numbersArray3 = [2, 7, 11, 12, 90, 30];
 console.log(calculateSumFromMinAndMaxNumber(...numbersArray3));
+
+
+// --- Exercise 12 ---
+// Numbers are read from the keyboard until zero appears. Determine the largest value read.
+// Restrictions and clarifications: 
+//     -> If the first value entered is zero, the message 'DOES NOT EXIST' will be displayed
+
+function findMaxNumberUntilZero(...numbers) {
+  if (numbers[0] === 0) {
+    throw Error('Does not exist! First number cannot be 0.');
+  }
+  
+  let arrayWithZeroLast = [];
+  
+  for (let i = 0; i < numbers.length; i++) {
+    arrayWithZeroLast.push(numbers[i]);
+    
+    if (numbers[i] === 0) {
+      break;
+    }
+  };
+  
+  return Math.max(...arrayWithZeroLast);
+};
+
+const numbersArray4 = [4, 6, 20, 34, 0, 222];
+console.log(findMaxNumberUntilZero(...numbersArray4));
