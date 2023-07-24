@@ -188,3 +188,27 @@ function cumulativeNestedSum(num) {
 };
 
 console.log(cumulativeNestedSum(5));
+
+
+// --- Exercise 9 ---
+// Given n integers. Calculate the largest of the n given numbers.
+// Restrictions and clarifications: 
+//     -> 1 <= n <= 1000
+//     -> the given n numbers will have at most 9 digits
+
+function returnMaxNumber(...numbers) {
+  if (numbers.length > 9) {
+    throw Error('You can input max 9 numbers.');
+  }
+  
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 1 || numbers[i] > 1000) {
+      throw Error('Each number must be between 1 and 1000');
+    }
+  };
+  
+  return Math.max(...numbers);
+};
+
+const numbersArray = [2, 6, 90, 100, 23, 167, 9, 5, 7];
+console.log(returnMaxNumber(...numbersArray));
