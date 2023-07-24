@@ -227,7 +227,7 @@ function returnMinNumber(...numbers) {
 
   for (let i = 0; i < numbers.length; i++ ) {
     if (numbers[i] < 1 || numbers[i] > 1000) {
-      throw Error('Each numbers must be between 1 and 1000');
+      throw Error('Each number must be between 1 and 1000');
     }
   };
 
@@ -236,3 +236,29 @@ function returnMinNumber(...numbers) {
 
 const numbersArray2 = [21, 6, 9, 100, 23, 17, 14, 5, 18];
 console.log(returnMinNumber(...numbersArray2));
+
+
+// Given n natural numbers. Calculate the sum of the largest and smallest given numbers.
+// Restrictions and clarifications:
+//      -> 1 <= n <= 100
+//      -> The n numbers read will have at most 6 digits
+
+function calculateSumFromMinAndMaxNumber(...numbers) {
+  if (numbers.length > 6) {
+    throw Error('You can input max 6 numbers.');
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 1 || numbers[i] > 100) {
+      throw Error('Each number must be between 1 and 100');
+    }
+  };
+
+  const maxNumber = Math.max(...numbers);
+  const minNumber = Math.min(...numbers);
+
+  return maxNumber + minNumber;
+};
+
+const numbersArray3 = [2, 7, 11, 12, 90, 30];
+console.log(calculateSumFromMinAndMaxNumber(...numbersArray3));
