@@ -2,20 +2,32 @@
 // Write a program that reads the natural number n and determines the sum S=2+4+..+(2n).
 // Restrictions and clarifications: 0 < n ≤ 10000
 
-function sumEvenNums(num) {
-  let sum = 0;
+function sumEvenNums(num, divider = 2) {
+  try {
+    if (num < 0 || num > 10_000) {
+      // const x = new Error();
+      // x.code = 'NUMBER_HIGHER';
+      throw {code: "NUMBER_HIGHER"};
+    }
 
-  for(let i = 2; i <= 2 * num && num > 0 && num <= 10000; i++) { 
-    if(i % 2 === 0) {
-      sum += i;
-    };
-  };
+    let sum = 0;
+    
+    for (let i = divider; i <= 2 * num; i = i + divider) { 
+      sum = sum + i;
+    }
 
-  if(num <= 0 || num > 10000) {
-    console.log('Please, enter a number smaller than 1000000!');
-  };
- 
-  return sum;
+    return sum;
+  } catch (error) {
+    // console.log(e);
+    if (error.code === 'NUMBER_HIGHER') {
+      console.log(`Your number is higher than 10.000`);
+    }
+    return 0;
+  }
 };
 
-console.log(sumEvenNums(48));
+console.log(sumEvenNums(20000));
+  console.log(sumEvenNums(4, 2));
+  console.log(sumEvenNums(40000));
+  console.log(sumEvenNums(4));
+console.log(sumEvenNums(30000));
