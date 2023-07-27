@@ -1,32 +1,3 @@
-// --- Exercise 8 ---
-// Given n natural numbers. For each number x, calculate:
-//    1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...x).
-// Restrictions and clarifications: 1 <= n <= 200
-
-function cumulativeNestedSum(num) {
-  if(num < 1 || num > 200) {
-    throw Error('Please, enter a number between 1 and 200!');
-  };
-  
-  let sum = 0;
-  let cumulativeX = 0;
-
-  for (let i = 1; i <= num; i++) {
-    if (i > 1) {
-      sum = sum + cumulativeX + i;
-      cumulativeX = cumulativeX + i;
-    } else {
-      sum = sum + i;
-      cumulativeX = cumulativeX + i;
-    }
-  };
-
-  return sum;
-};
-
-console.log(cumulativeNestedSum(5));
-
-
 // --- Exercise 9 ---
 // Given n integers. Calculate the largest of the n given numbers.
 // Restrictions and clarifications: 
