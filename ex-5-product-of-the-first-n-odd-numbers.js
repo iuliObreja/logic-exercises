@@ -29,4 +29,4 @@ function returnOddProduct(limit) {
   }
 };
 
-console.log(returnOddProduct(3));
+console.log(returnOddProduct(4));
