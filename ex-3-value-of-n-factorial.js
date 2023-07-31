@@ -9,9 +9,13 @@ function nFactorial(num) {
       throw 'NUMBER_LOWER_OR_HIGHER';
     }
 
+    if(num === 0 || num === 1) {
+      return 1;
+    }
+
     let nFactorial = 1;
 
-    for(let i = 1; i <= num; i++) {
+    for(let i = 2; i <= num; i++) {
       nFactorial = nFactorial * i;
     }
 
@@ -24,4 +28,36 @@ function nFactorial(num) {
   }
 };
 
-console.log(nFactorial(16));
+console.log(nFactorial(4));
+
+// using recursive function
+function nFactorialRecursive(num) {
+  if (num <= 1) {
+    return 1;
+  }
+    
+  return nFactorialRecursive(num - 1) * num;
+};
+
+console.log(nFactorialRecursive(0));
+console.log(nFactorialRecursive(1));
+console.log(nFactorialRecursive(2));
+console.log(nFactorialRecursive(3));
+console.log(nFactorialRecursive(4));
+
+
+// num = 4
+// 4 <= 0 ? nu 
+//  nFactorialRecursive(3) * (num) => 6 * 4 = 24
+
+// num = 3
+// 2 <= 0 ? nu
+//  nFactorialRecursive(2) * (num) => 2 * 3 = 6
+
+// num = 2
+// 1 <= 0 ? nu
+//  nFactorialRecursive(1) * (num) => 1 * 2 = 2
+
+// num = 1
+// 1 <= 1 ? da
+//  return 1
