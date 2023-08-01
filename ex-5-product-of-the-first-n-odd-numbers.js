@@ -34,17 +34,17 @@ console.log(returnOddProduct(4));
 
 
 // using recursive function
-function returnOddProductRecursive(num, counter = 0, startingPoint = 1) {
+function calculateOddProductRecursive(num, counter = 0, startingPoint = 1) {
   if (counter === num - 1) {
     return startingPoint;
   }
     
   counter = counter + 1;
 
-  return returnOddProductRecursive(num, counter, startingPoint + 2) * startingPoint;
+  return calculateOddProductRecursive(num, counter, startingPoint + 2) * startingPoint;
 };
 
-console.log(returnOddProductRecursive(4));
+console.log(calculateOddProductRecursive(4));
 
 // num = 4, counter = 0, startingPoint = 1
 // 0 === 4 - 1 ? nu
