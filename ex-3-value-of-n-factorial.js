@@ -48,15 +48,15 @@ console.log(nFactorialRecursive(4));
 
 // num = 4
 // 4 <= 0 ? nu 
-//  nFactorialRecursive(3) * (num) => 6 * 4 = 24
+//  nFactorialRecursive(num - 1 = 3) * (num) => 6 * 4 = 24
 
 // num = 3
-// 2 <= 0 ? nu
-//  nFactorialRecursive(2) * (num) => 2 * 3 = 6
+// 3 <= 0 ? nu
+//  nFactorialRecursive(num - 1 = 2) * (num) => 2 * 3 = 6
 
 // num = 2
-// 1 <= 0 ? nu
-//  nFactorialRecursive(1) * (num) => 1 * 2 = 2
+// 2 <= 0 ? nu
+//  nFactorialRecursive(num - 1 = 1) * (num) => 1 * 2 = 2
 
 // num = 1
 // 1 <= 1 ? da
