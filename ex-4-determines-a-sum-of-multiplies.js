@@ -49,15 +49,15 @@ console.log(sumFromMultiplyRecursive(4)); // 20
 
 // num = 4
 // 4 <= 1 ? nu
-//  sumFrom(4-1, 1) + 1 * 4 => 16 + 4 = 20
+//  sumFrom(4-1, 2) + 1 * 4 => 16 + 4 = 20
 
 // num = 3
 // 3 <= 1 ? nu
-//  sumFrom(3-1, 1 + 1) + 2 * 3 => 10 + 6 = 16
+//  sumFrom(3-1, 3) + 2 * 3 => 10 + 6 = 16
 
 // num = 2
 // 2 <= 1 ? nu
-//  sumFrom(2-1, 2 + 1) + 3 * 2 => 4 + 6 = 10
+//  sumFrom(2-1, 4) + 3 * 2 => 4 + 6 = 10
 
 // num = 1
 // 1 <= 1 ? da

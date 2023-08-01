@@ -25,8 +25,43 @@ function returnOddProduct(limit) {
     if (e === 'NUMBER_SMALLER_OR_HIGHER') {
       console.log(`Enter a number between 0 and 15 !`);
     }
+
     return 0;
   }
 };
 
 console.log(returnOddProduct(4));
+
+
+// using recursive function
+function returnOddProductRecursive(num, counter = 0, startingPoint = 1) {
+  if (counter === num - 1) {
+    return startingPoint;
+  }
+    
+  counter = counter + 1;
+
+  return returnOddProductRecursive(num, counter, startingPoint + 2) * startingPoint;
+};
+
+console.log(returnOddProductRecursive(4));
+
+// num = 4, counter = 0, startingPoint = 1
+// 0 === 4 - 1 ? nu
+// counter = 0 + 1 => counter = 1
+//  return(4, 1, 3) * 1
+
+// num = 4, counter = 1, startingPoint = 3
+// 1 === 4 - 1? nu
+// counter = 1 + 1 => counter = 2
+//  return(4, 2, 5) * 3 
+
+// num = 4, counter = 2, startingPoint = 5
+// 2 === 4 - 1 ? nu
+// counter = 2 + 1 => counter = 3
+//  return(4, 3, 7) * 5
+
+// num = 4, counter = 3, startingPoint = 7
+// 3 === 4 - 1 ? da => return 7
+
+// return 7 * 5 * 3 * 1 = 105
