@@ -2,7 +2,7 @@
 // Given the nonzero natural number n. Find the product of the first n odd numbers
 // Restrictions and clarifications: 1 ≤ n ≤ 15
 
-function returnOddProduct(limit) {
+function calculateOddProduct(limit) {
   try {
     if (limit <= 0 || limit > 15) {
       throw ('NUMBER_SMALLER_OR_HIGHER');
@@ -30,7 +30,7 @@ function returnOddProduct(limit) {
   }
 };
 
-console.log(returnOddProduct(4));
+console.log(calculateOddProduct(4));
 
 
 // using recursive function

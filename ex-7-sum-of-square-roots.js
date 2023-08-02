@@ -2,7 +2,7 @@
 // Given N, a nonzero natural number, calculate the sum S = 1**2 + 2**2 + 3**2 + ... + n**2
 // Restrictions and clarifications: 1 <= N <= 30
 
-function returnSumOfSquareNumbers(num) {
+function calcSumOfSquareNumbers(num) {
   try {
     if (num < 1 || num > 30) {
       throw Error('NUMBER_SMALLER_OR_HIGHER');
@@ -23,4 +23,29 @@ function returnSumOfSquareNumbers(num) {
   }
 };
 
-console.log(returnSumOfSquareNumbers(3));
+console.log(calcSumOfSquareNumbers(3));
+
+
+// recursive method
+function calcSumOfSquareNumbersRecursive(num) {
+  if (num <= 1) {
+    return 1;
+  }
+
+  return calcSumOfSquareNumbersRecursive(num - 1) + num ** 2;
+};
+
+console.log(calcSumOfSquareNumbersRecursive(3));
+
+// num = 3
+// 3 <= 1? nu
+//  return(num - 1 => 2) + 3 ** 2
+
+// num = 2
+// 2 <= 1? nu
+//  return(num - 1 => 1) + 2 ** 2
+
+// num = 1
+// 1 <= 1 ? da => return 1
+
+// return 1 + 2 ** 2 + 3 ** 2 = 14
