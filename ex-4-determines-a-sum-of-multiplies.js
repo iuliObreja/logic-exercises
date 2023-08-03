@@ -33,7 +33,7 @@ console.log(sumFromMultiply(4));
 
 
 // using recursive function
-function sumFromMultiplyRecursive(limit, index = 1) { // num = 4
+function sumFromMultiplyRecursive(limit, index = 1) {
   if (limit <= 1) {
     return index;
   }

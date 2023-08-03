@@ -23,20 +23,33 @@ function calcSumOfSquareNumbers(num) {
   }
 };
 
-console.log(calcSumOfSquareNumbers(3));
+console.log(calcSumOfSquareNumbers(2));
 
 
 // recursive method
-function calcSumOfSquareNumbersRecursive(num) {
-  if (num <= 1) {
-    return 1;
-  }
+function calcSumOfSquareNumbersRecursive(min, max) {
+  try {
+    if (min > max) {
+      throw "MIN_GREATER_THAN_MAX";
+    }
+    
+    if (min === max) {
+      return 1;
+    }
 
-  return calcSumOfSquareNumbersRecursive(num - 1) + num ** 2;
+    return calcSumOfSquareNumbersRecursive(min, max - 1) + max ** 2;
+  } catch (e) {
+    if (e === "MIN_GREATER_THAN_MAX") {
+      console.log("Minimum number should be lower that max.");
+    }  
+  }
 };
 
-console.log(calcSumOfSquareNumbersRecursive(3));
+for (let i = 1; i < 5; i++) {
+  console.log(calcSumOfSquareNumbersRecursive(1, i)); 
+};
 
+//     For Single parameter
 // num = 3
 // 3 <= 1? nu
 //  return(num - 1 => 2) + 3 ** 2
@@ -49,3 +62,23 @@ console.log(calcSumOfSquareNumbersRecursive(3));
 // 1 <= 1 ? da => return 1
 
 // return 1 + 2 ** 2 + 3 ** 2 = 14
+
+//      For Two parameters
+// min = 1, max = 4
+// 1 === 4 ? nu
+//  return(3) + 4 ** 2
+
+// min = 1, max = 3
+// 1 === 3 ? nu
+//  return(2) + 3 ** 2
+
+// min = 1, max = 2
+// 1 === 2 ? nu
+//  return(1) + 2 ** 2
+
+// min = 1, max = 1
+// 1 === 1 ? da => return 1
+
+// 1 + 2**2 + 3**2 + 3**2 + 4**2
+
+
