@@ -3,7 +3,7 @@
 // Restrictions and clarifications: 
 //     -> If the first value entered is zero, the message 'DOES NOT EXIST' will be displayed
 
-function findMaxNumberUntilZero(...numbers) {
+function findMaxNumberUntilZero(numbers) {
   try {
     if (numbers[0] === 0) {
       throw Error('DOES_NOT_EXIST');
@@ -29,4 +29,4 @@ function findMaxNumberUntilZero(...numbers) {
 };
 
 const numbersArray4 = [0,4, 6, 20, 34, 0, 222];
-console.log(findMaxNumberUntilZero(...numbersArray4));
+console.log(findMaxNumberUntilZero(numbersArray4));

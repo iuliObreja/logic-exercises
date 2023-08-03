@@ -32,3 +32,6 @@ function calculateSumFromMinAndMaxNumber(...numbers) {
 
 const numbersArray3 = [2, 7, 11, 12, 90, 30];
 console.log(calculateSumFromMinAndMaxNumber(...numbersArray3));
+
+// use 9 and 10 for solving 11
+// I can use as many functions I want
