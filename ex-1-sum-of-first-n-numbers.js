@@ -2,6 +2,7 @@
 // Read an integer n. Calculate the sum of all natural numbers less than or equal to n
 // Restrictions and clarifications: n ≤ 1.000.000
 
+// method 1:
 function sumNaturalNums(num) {
   if(num > 1_000_000) {
     throw Error('Please, enter a number smaller than 1.000.000!');
@@ -16,10 +17,21 @@ function sumNaturalNums(num) {
   return sum;
 };
 
-
+// method 2 - no restrictions
 function sumNaturalNumbers(n) {
   return n * (n + 1) / 2;
 };
+
+// method 3 - recursive function
+function sumNaturalNumbersRecursive(n) {
+  if (n <= 1) {
+    return 1;
+  }
+  
+  return sumNaturalNumbersRecursive(n - 1) + n;
+};
+
+console.log(sumNaturalNumbersRecursive(10));
 
 console.time("Start 2");
 console.log(sumNaturalNumbers(10));
@@ -51,5 +63,6 @@ console.timeEnd("start 1");
 
 // Am invatat ca pot "prinde" o eroare cu "try catch", pt a nu mi se mai opri executia codului
 // dupa intalnirea unei erori
-//        se foloseste exact acolo unde se intampla eroarea, de ex, la apelarea unei functii, nu in functie
+//        se foloseste in functie, acolo unde vrem sa "aruncam" o eroare, mai bine zis, o exceptie;
+//            aceasta exceptie poate fi orice, un string, un obiect, un nr, un boolean etc
 
