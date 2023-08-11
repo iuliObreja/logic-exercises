@@ -17,7 +17,7 @@ function isPrime(num) {
       }
    };
 
-   return true;;
+   return true;
 };
 
 console.log(isPrime(23));
