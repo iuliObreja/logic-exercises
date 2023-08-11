@@ -5,7 +5,7 @@
 //      -> if there are no positive values among the read values,
 //         display the message 'NO POSITIVE VALUES FOUND'.
 
-function findSmallestPositiveValueUntilZero(...numbers) {
+function findSmallestPositiveValueUntilZero(numbers) {
   try {
     let arrayWithZeroLast = [];
     let countPositive = 0;
@@ -32,4 +32,4 @@ function findSmallestPositiveValueUntilZero(...numbers) {
 };
 
 const numbersArray5 = [-4, 20, 8, -2, 15, 3, 0, 1];
-console.log(findSmallestPositiveValueUntilZero(...numbersArray5));
+console.log(findSmallestPositiveValueUntilZero(numbersArray5));

@@ -1,13 +1,12 @@
 // --- Exercise 9 ---
 // Given n integers. Calculate the largest of the n given numbers.
-// Restrictions and clarifications: 
 
-// 1:
+// method 1:
 function calculateMaxNumber(numbers) {
   return Math.max(...numbers);
 };
 
-// 2:
+// method 2:
 // arr = [2, 6, 90, 100, 23, 167, 9, 5, 7]
 // presupunem ca avem cel mai mare nr natural, care este 0
 // comparam acest cel mai mare nr natural, pe rand, cu toate nr din sir

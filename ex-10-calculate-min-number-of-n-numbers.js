@@ -2,12 +2,12 @@
 // Given n integers. Calculate the smallest of the n given numbers.
 // Restrictions and clarifications: 
 
-// 1:
+// method 1:
 function calculateMinNumber(numbers) {
     return Math.min(...numbers);
 };
 
-// 2:
+// method 2:
 function calcMinNumber(numbers) {
     let minNum = calcMaxNumber(numbers);
         
