@@ -3,6 +3,7 @@
 //    1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...x).
 // Restrictions and clarifications: 1 <= n <= 200
 
+// method 1:
 function calcCumulativeNestedSum(num) {
   try {
     if(num < 1 || num > 200) {
@@ -35,23 +36,25 @@ console.log(calcCumulativeNestedSum(4));
 console.log(calcCumulativeNestedSum(2));
 
 
-// recursive method
-// for num = 4 -->  1 + (1 + 2) + (1 + 2 + 3) + (1 + 2 + 3 + 4)
-
-// recursive o sa inceapa de sus, de la ultimul rand, unde num = 4
-// deci o sa avem recursiva + num
-  // num = 4 => return(3) + 4
-  // num = 3 => return(2) + 3
-  // num = 2 => return(1) + 2
-  // num = 1 => return 1 
-// 
-
+// method 2: recursive method - no restrictions
 function calcCumulativeNestedSumRecursive(num) {
   if (num <= 1) {
     return 1;
   }
+  
+  let x = sumUntilNumMinusOneRecursive(num);
 
-
+  return calcCumulativeNestedSumRecursive(num - 1, x) + x + num;
 };
 
-// inspira-te din ex 1 (fa-l si pe 1 recursiv)
+console.log(calcCumulativeNestedSumRecursive(4));
+
+
+// helper function
+function sumUntilNumMinusOneRecursive(n) {
+  if (n <= 2) {
+    return 1;
+  }
+  
+  return sumUntilNumMinusOneRecursive(n - 1) + n - 1;
+};
