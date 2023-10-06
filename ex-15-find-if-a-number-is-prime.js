@@ -1,7 +1,7 @@
 // sa se determine daca un numar n, primit de la tastatura, este prim
 
 function isPrime(num) {
-   if (num < 2) {
+   if (num < 3) {
     return false;
    }
 
