@@ -37,20 +37,3 @@ function calcExponentialSumRecursive(num) {
 };
 
 console.log(calcExponentialSumRecursive(4));
-
-// num = 4
-// 4 <= 1 ? nu
-//  return(3) + 4**4
-
-// num = 3
-// 3 <= 1 ? nu
-//  return(2) + 3**3
-
-// num = 2
-// 2 <= 1 ? nu
-//  return(1) + 2**2
-
-// num = 1
-// 1 <= 1? dhea! => 1
-
-// return 1 + 2**2 + 3**3 + 4**4

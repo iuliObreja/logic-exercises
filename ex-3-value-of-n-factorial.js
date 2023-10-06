@@ -44,20 +44,3 @@ console.log(nFactorialRecursive(1));
 console.log(nFactorialRecursive(2));
 console.log(nFactorialRecursive(3));
 console.log(nFactorialRecursive(4));
-
-
-// num = 4
-// 4 <= 0 ? nu 
-//  nFactorialRecursive(num - 1 = 3) * (num) => 6 * 4 = 24
-
-// num = 3
-// 3 <= 0 ? nu
-//  nFactorialRecursive(num - 1 = 2) * (num) => 2 * 3 = 6
-
-// num = 2
-// 2 <= 0 ? nu
-//  nFactorialRecursive(num - 1 = 1) * (num) => 1 * 2 = 2
-
-// num = 1
-// 1 <= 1 ? da
-//  return 1

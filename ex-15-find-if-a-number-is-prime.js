@@ -1,4 +1,5 @@
-// sa se determine daca un numar n, primit de la tastatura, este prim
+// --- Exercise 15 ---
+// Determine if a number is prime
 
 function isPrime(num) {
    if (num < 3) {

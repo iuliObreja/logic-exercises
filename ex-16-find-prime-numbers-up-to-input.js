@@ -1,4 +1,6 @@
-// sa se determine nr prime pana la n, unde n este input
+// --- Exercise 16 ---
+// Find prime numbers up to input
+
 function primeNumbersUpToInput(num) {
  let primeNumbersArray = [];
 

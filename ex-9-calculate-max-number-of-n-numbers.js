@@ -7,12 +7,6 @@ function calculateMaxNumber(numbers) {
 };
 
 // method 2:
-// arr = [2, 6, 90, 100, 23, 167, 9, 5, 7]
-// presupunem ca avem cel mai mare nr natural, care este 0
-// comparam acest cel mai mare nr natural, pe rand, cu toate nr din sir
-// daca gasim un nr in sir mai mare decat cel mai mare nr natural,
-// ii atribuim celui mai mare nr natural, noua valoare gasita
-
 function calcMaxNumber(numbers) {
   let maxNum = 0;
   
