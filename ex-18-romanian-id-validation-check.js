@@ -28,17 +28,15 @@ function checkIdIfValid(id) {
   for (let i = 0; i < idArray.length - 1; i++) {
     const idNum = idArray[i];
     const checkNum = useForCheck[i]; 
-    sum = sum + idNum * checkNum;  
+    sum = sum + idNum * checkNum;
   }
   
   let controlNumber = sum % 11;
   let lastIdDigit = idArray[idArray.length - 1];
   
-  if (controlNumber <= 10 && controlNumber === lastIdDigit && idArray.length === 13) {
-    return `Your CNP is valid`;
-  }
-  
-  return `Your CNP is not valid`;
+  const isValidCNP = controlNumber <= 10 && controlNumber === lastIdDigit;
+                     
+  return isValidCNP ? `Your CNP is valid` : `Your CNP is not valid`;
 };
 
 console.log(checkIdIfValid(2910218090018));
