@@ -2,7 +2,7 @@
 // Determine if a number is prime
 
 function isPrime(num) {
-   if (num < 3) {
+   if (num < 2) {
     return false;
    }
 
@@ -21,6 +21,6 @@ function isPrime(num) {
    return true;
 };
 
-console.log(isPrime(23));
+console.log(isPrime(2));
 
 
