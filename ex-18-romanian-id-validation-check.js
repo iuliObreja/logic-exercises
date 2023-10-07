@@ -31,8 +31,8 @@ function checkIdIfValid(id) {
     sum = sum + idNum * checkNum;
   }
   
-  let controlNumber = sum % 11;
-  let lastIdDigit = idArray[idArray.length - 1];
+  const controlNumber = sum % 11;
+  const lastIdDigit = idArray[idArray.length - 1];
   
   const isValidCNP = controlNumber <= 10 && controlNumber === lastIdDigit;
                      
