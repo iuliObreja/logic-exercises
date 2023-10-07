@@ -6,14 +6,8 @@ function isPrime(num) {
     return false;
    }
 
-   let notPrimeRange = 0;
-
-   for (let i = 1; i <= num; i++) {
-      if (i > 1 && i < num) {
-         notPrimeRange = i;
-      }
-
-      if (num % notPrimeRange === 0) {
+   for (let i = 2; i < num; i++) {
+     if (num % i === 0) {
          return false;
       }
    };
@@ -21,6 +15,4 @@ function isPrime(num) {
    return true;
 };
 
-console.log(isPrime(2));
-
-
+console.log(isPrime(23));
